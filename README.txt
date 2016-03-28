@@ -27,3 +27,11 @@ Programs:
   Solution: Use a mutex to synchronize the access on the object.
   Compile with:
   	  clang++ -std=c++0x -g -fsanitize=thread data-race02.cc -o data-race02 -pthread
+
+* data-race03.cc 
+  Description: If a program calls exit() while other threads are still
+  running, static objects may be destructed by one thread and used by
+  another thread at the same time.
+  Solution: 
+  Compile with: 
+  	  clang++ -std=c++0x -g -fsanitize=thread data-race03.cc -o data-race03 -pthread

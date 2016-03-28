@@ -13,7 +13,6 @@
  *
  */
 #include <thread>
-#include <map>
 
 class MyType {
 
