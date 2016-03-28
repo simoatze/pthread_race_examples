@@ -35,3 +35,10 @@ Programs:
   Solution: 
   Compile with: 
   	  clang++ -std=c++0x -g -fsanitize=thread data-race03.cc -o data-race03 -pthread
+
+* data-race04.cc Description: Sometimes one thread of a program may
+  access a heap memory while another thread is deallocating the same
+  memory.
+  Solution: 
+  Compile with: 
+  	  clang++ -std=c++0x -g -fsanitize=thread data-race04.cc -o data-race04 -pthread
